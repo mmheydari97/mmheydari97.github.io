@@ -1,6 +1,6 @@
 # mmheydari97.github.io
 
-Personal résumé site for Mohammad Heydari, served by GitHub Pages at <https://mmheydari97.github.io>.
+Personal résumé site for Kian Heydari, served by GitHub Pages at <https://mmheydari97.github.io>.
 
 ## Structure
 

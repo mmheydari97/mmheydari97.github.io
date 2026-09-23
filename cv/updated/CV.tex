@@ -1,112 +1,126 @@
 \documentclass{resume}
 
-\usepackage[left=0.4 in,top=0.4in,right=0.4 in,bottom=0.4in]{geometry} 
-\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+\usepackage[left=0.4 in,top=0.4in,right=0.4 in,bottom=0.4in]{geometry}
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
-\name{Mohammad Heydari} 
-\address{1591 Lycée Place, Ottawa, ON, K1G 4A7 \\ +1 (613) 203 4437} 
-\address{moheydari1997@gmail.com \\ linkedin.com/in/mmheydari97 \\ github.com/mmheydari97}
+\name{Kian Heydari}
+\address{Toronto, ON \\ moheydari1997@gmail.com \\ linkedin.com/in/mmheydari97 \\ github.com/mmheydari97}
 
 \begin{document}
 
-\begin{rSection}{OBJECTIVE}
-Python Developer with expertise in \textbf{data engineering} and \textbf{ETL processes}. Strong background in \textbf{Python development} using \textbf{pandas} and \textbf{NumPy} for data transformation. Experienced in \textbf{API development} with \textbf{FastAPI} and \textbf{database management} with \textbf{SQL/NoSQL}. Proven track record of successfully \textbf{migrating legacy systems} to efficient Python-based implementations with improved performance.
+\begin{rSection}{SUMMARY}
+Senior Developer specializing in \textbf{machine learning} and \textbf{generative AI applications}, backed by solid software and data engineering: \textbf{ETL pipelines}, \textbf{Azure} migration, and \textbf{CI/CD} in production, plus \textbf{agentic LLM pipelines} and \textbf{small language model distillation} in research. Works across \textbf{Python}, \textbf{SQL Server}, \textbf{Azure}, \textbf{Microsoft Fabric}, \textbf{Databricks}, \textbf{LangGraph}, \textbf{DSPy}, and \textbf{Hugging Face}.
 \end{rSection}
 
 
 \begin{rSection}{EXPERIENCE}
 
-\textbf{Analytics Engineer} \hfill \textit{February 2025 - Present}\\
+\textbf{Senior IT Developer} \hfill \textit{May 2025 - Present}\\
+TD Securities, Credit Risk Reporting \hfill \textit{Toronto, Canada}
+ \begin{itemize}
+    \itemsep -3pt {}
+    \item Design, maintain, and optimize \textbf{ETL pipelines} in \textbf{Python} and \textbf{Microsoft SQL Server} that feed credit risk reporting.
+    \item Migrated legacy ETL applications to \textbf{Azure}, replacing file-watcher triggers with \textbf{semantic dependencies between jobs}: an easier-to-follow flow, fewer failures, and $\sim$\textbf{50\% fewer jobs}.
+    \item Automate build, test, and deployment with \textbf{GitHub Actions CI/CD}, and keep code secure and maintainable with \textbf{Snyk}, \textbf{Veracode}, and \textbf{SonarQube}.
+    \item Volunteer on the \textbf{ML Tooling} team, focusing on \textbf{agentic AI} and helping colleagues adopt the AI tools being rolled out. My team leads the organization \textbf{by a wide margin} on AI-integration dashboards.
+ \end{itemize}
+
+\textbf{Research Assistant (Part-time)} \hfill \textit{January 2025 - August 2025}\\
+Carleton University, supervised by Prof. Ali Arya \hfill \textit{Ottawa, Canada}
+ \begin{itemize}
+    \itemsep -3pt {}
+    \item Researched LLM translation for \textbf{low-resource Indigenous languages} such as Northern Tutchone, which mainstream models have seen little or no data for.
+    \item Built a training-free \textbf{agentic translation pipeline} and a \textbf{knowledge distillation} pipeline for small, locally run translation models (see Projects).
+    \item Wrote four literature reviews: LLM capabilities and efficiency; adapting generative models to low-resource languages; retrieving in-context examples without vector indexes; and grammar induction.
+    \item Compared \textbf{mT5}, \textbf{mBART}, \textbf{XLM-R} adaptations (XLM-SWCM, XLM-V), \textbf{NLLB}, \textbf{BLOOMZ}, \textbf{ByT5}, language-specific (PhoBERT, AfriBERTa), and specialized models (FuxiMT, DeltaLM).
+ \end{itemize}
+
+\textbf{Analytics Engineer} \hfill \textit{February 2025 - April 2025}\\
 Revolution Data Platforms \hfill \textit{Ottawa, Canada}
  \begin{itemize}
-    \itemsep -3pt {} 
-    \item Developed a real-time customer service call management system using \textbf{Python}, \textbf{FastAPI}, and \textbf{WebSockets}, building end-to-end data processing pipelines for voice communication.
-    \item Implemented a prototype application for voice memo transcription with \textbf{structured data extraction} and automated task management based on content severity.
-    \item Optimized multi-class text classification through \textbf{prompt engineering} and \textbf{k-fold validation}, significantly improving model performance.
-    \item Enhanced data quality through efficient \textbf{web scraping}, \textbf{data transformation}, and \textbf{preprocessing techniques} in Python.
+    \itemsep -3pt {}
+    \item Developed a real-time customer service call management system using \textbf{Python}, \textbf{FastAPI}, and \textbf{WebSockets}, with end-to-end voice data pipelines.
+    \item Prototyped voice memo transcription with \textbf{structured data extraction} and automated task management based on content severity.
+    \item Optimized multi-class text classification through \textbf{prompt engineering} and \textbf{k-fold validation}.
+    \item Improved data quality through \textbf{web scraping}, transformation, and preprocessing in Python.
  \end{itemize}
- 
+
 \textbf{Software Engineer} \hfill \textit{January 2023 - August 2024}\\
 Paphus Solutions \hfill \textit{Ottawa, Canada}
  \begin{itemize}
-    \itemsep -3pt {} 
-    \item Successfully migrated a Unity-based Android application to WebGL, implementing asynchronous connection management and data handling, demonstrating strong system migration capabilities.
-    \item Integrated Python-based analytics pipelines with cloud services, enhancing real-time data processing through optimized ETL workflows.
-    \item Developed chatbot APIs across multiple platforms using Python and RESTful services, improving user engagement through data-driven insights.
-    \item Optimized deep learning models for custom question-answering, focusing on efficient data processing and query handling.
+    \itemsep -3pt {}
+    \item Developed \textbf{chatbot APIs} across multiple platforms using Python and RESTful services.
+    \item Optimized \textbf{deep learning} models for custom \textbf{question answering}.
+    \item Integrated Python analytics pipelines with \textbf{cloud services} through optimized \textbf{ETL} workflows.
+    \item Migrated a Unity-based Android application to WebGL with asynchronous connection management.
  \end{itemize}
- 
+
 \textbf{Course Instructor} \hfill \textit{September 2022 - December 2022}\\
 Carleton University \hfill \textit{Ottawa, Canada}
  \begin{itemize}
-    \itemsep -3pt {} 
-    \item Delivered comprehensive Python programming workshops focusing on data manipulation, pandas, and ETL concepts for real-world applications.
-    \item Guided students in implementing ER diagrams and SQL for practical database solutions, emphasizing data integrity and efficient query optimization.
+    \itemsep -3pt {}
+    \item Taught Python workshops on data manipulation, pandas, and ETL concepts.
+    \item Guided students through ER modeling and SQL, emphasizing data integrity and query optimization.
  \end{itemize}
 
 \textbf{Graduate Research Assistant} \hfill \textit{January 2021 - November 2022}\\
 Carleton University \hfill \textit{Ottawa, Canada}
  \begin{itemize}
-    \itemsep -3pt {} 
-    \item Developed a Python-based data generation and transformation pipeline, optimizing ETL processes for deep learning models in research applications.
-    \item Designed custom data preprocessing workflows and performance metrics for efficient data analysis and model evaluation.
+    \itemsep -3pt {}
+    \item Built a Python data generation and transformation pipeline for deep learning research.
+    \item Designed data preprocessing workflows and custom metrics for model evaluation.
  \end{itemize}
 
 \textbf{Undergraduate Research Assistant} \hfill \textit{February 2018 - December 2020}\\
-Amirkabir University \hfill \textit{Tehran, Iran}
+Amirkabir University of Technology \hfill \textit{Tehran, Iran}
  \begin{itemize}
-    \itemsep -3pt {} 
-    \item Developed a Python-based anomaly detection system for time-series data processing, implementing efficient data transformation and feature extraction techniques.
-    \item Created simulation frameworks for generating and validating synthetic data, enhancing model training and evaluation methodologies.
+    \itemsep -3pt {}
+    \item Developed a Python anomaly detection system for time-series data, with feature extraction.
+    \item Created simulation frameworks to generate and validate synthetic training data.
  \end{itemize}
-
-\end{rSection}
-
-\begin{rSection}{Education}
-
-{\bf M.Sc. in Computer Science (Specialization in Data Science)}  \hfill {\textit{January 2021 - November 2022}}\\
-{Carleton University} \hfill \textit{Ottawa, Canada}
-\\
-\\
-{\bf B.Sc. in Computer Engineering} \hfill {\textit{September 2015 - December 2020}}\\
-Amirkabir University \hfill \textit{Tehran, Iran}
 
 \end{rSection}
 
 \begin{rSection}{PROJECTS}
 \begin{itemize}
 
-\item \textbf{Fine-Tuning and Local RAG for LLMs}\\ 
-{Developed a lightweight data processing pipeline for Retrieval-Augmented Generation (RAG) using \textbf{Python}, enhancing information retrieval from domain-specific datasets. Implemented efficient data extraction and transformation techniques to optimize contextual search, demonstrating expertise in ETL processes for NLP applications.}
+\item \textbf{Multi-Agent Translation System} \hfill \textit{github.com/uni-VR-sity/translation-agent-system}\\
+{Training-free, few-shot translation into languages the base LLM was not trained on, inspired by ``Hire a Linguist!''. Parallel agents pull relevant dictionary entries, grammar rules, and examples; a translator agent and an \textbf{LLM judge} run a self-correction loop. Adds a \textbf{map-reduce} mode for large documents and a \textbf{memory layer} that learns from judge feedback. Built with \textbf{LangGraph}, \textbf{DSPy}, \textbf{Instructor}, \textbf{LiteLLM}, and \textbf{Streamlit}.}
 
-\item \textbf{Custom Information Retrieval System}\\ 
-{Built a search engine from scratch in \textbf{Python}, implementing data extraction, cleaning, and transformation pipelines for efficient text processing. Utilized \textbf{pandas} for data manipulation and designed an indexing system to improve search accuracy for large document collections.}
+\item \textbf{Small Language Model Distillation for Translation} \hfill \textit{PyTorch, Hugging Face, LoRA, MLflow}\\
+{Teacher LLMs (\textbf{Mistral}, \textbf{Gemma 2}) enrich a small English--Northern Tutchone parallel corpus with paraphrases, context, and longer sequences; multilingual students (\textbf{mT5}, \textbf{M2M100}, \textbf{mBART-50}) are fine-tuned fully or with \textbf{LoRA} in both directions, with BLEU-based early stopping, grid search, and MLflow tracking.}
 
-\item \textbf{NLP-Driven Sentiment Analysis}\\ 
-{Developed a Python-based ETL pipeline for processing textual data using \textbf{pandas} and \textbf{NumPy}. Created vectorized operations for efficient text feature extraction, achieving 93.61\% accuracy in sentiment classification through optimized data transformation.}
+\item \textbf{Fine-Tuning and Local RAG for LLMs:} lightweight RAG pipeline in Python for domain-specific data.
+
+\item \textbf{Custom Information Retrieval System:} search engine from scratch in Python, with custom indexing.
+
+\item \textbf{NLP-Driven Sentiment Analysis:} pandas/NumPy pipeline reaching 93.61\% classification accuracy.
 
 \end{itemize}
 \end{rSection}
 
-\begin{rSection}{SKILLS}
+\begin{rSection}{Education}
+
+{\bf M.Sc. in Computer Science (Specialization in Data Science)}  \hfill {\textit{January 2021 - November 2022}}\\
+{Carleton University} \hfill \textit{Ottawa, Canada}\\[0.5em]
+{\bf B.Sc. in Computer Engineering} \hfill {\textit{September 2015 - December 2020}}\\
+Amirkabir University of Technology \hfill \textit{Tehran, Iran}
+
+\end{rSection}
+
+\begin{rSection}{SKILLS, LANGUAGES \& CERTIFICATIONS}
 
 \begin{itemize}
-    \item Strong proficiency in \textbf{Python} development with expertise in \textbf{pandas}, \textbf{NumPy}, and \textbf{scikit-learn} for implementing efficient ETL pipelines and data transformation workflows.
-    
-    \item Extensive experience in \textbf{data engineering} and \textbf{database management} with both SQL (PostgreSQL, MySQL) and NoSQL solutions for optimized data storage and retrieval.
-    
-    \item Demonstrated ability in \textbf{API development} using \textbf{FastAPI}, \textbf{Flask}, and \textbf{Django} for robust back-end systems that handle complex data processing.
-    
-    \item Proven track record in \textbf{system migration} projects, successfully transitioning legacy codebases to modern Python implementations with improved performance.
-    
-    \item Proficient in \textbf{cloud-based data solutions} on AWS and Azure, with experience optimizing data processing pipelines in distributed environments.
+    \itemsep -3pt {}
+    \item \textbf{ML \& Generative AI:} LangGraph, DSPy, Instructor, LiteLLM, Hugging Face Transformers, PyTorch, PEFT/LoRA, knowledge distillation, RAG, prompt engineering, MLflow, scikit-learn, pandas, NumPy.
+    \item \textbf{Data Engineering:} ETL design and optimization, Microsoft SQL Server, Microsoft Fabric, Databricks, PostgreSQL, MySQL, NoSQL.
+    \item \textbf{Cloud \& DevOps:} Azure, AWS, GitHub Actions CI/CD, Docker, Git, Linux, Snyk, Veracode, SonarQube.
+    \item \textbf{Backend \& APIs:} FastAPI, Flask, Django, ASP.NET, REST, WebSockets, Streamlit.
+    \item \textbf{Programming:} Python, SQL, C\# (.NET), Java, JavaScript/TypeScript.
+    \item \textbf{Languages:} English (Fluent), French (Intermediate), Persian (Native).
+    \item \textbf{Certifications:} DataCamp Data Scientist with Python, Coursera GANs Specialization.
 \end{itemize}
 
-\end{rSection}
-
-\begin{rSection}{LANGUAGES \& CERTIFICATIONS}
-\textbf{Programming:} Python, SQL, Java, C\# \hfill \textbf{Languages:} English (Fluent), French (Intermediate), Persian (Native)\\
-\textbf{Certifications:} DataCamp Data Scientist with Python, Coursera GANs Specialization
 \end{rSection}
 
 \end{document}
