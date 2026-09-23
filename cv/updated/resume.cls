@@ -1,77 +1,139 @@
-%----------------------------------------------------------------------------------------
-%	CLASS OPTIONS AND REQUIRED PACKAGES
-%----------------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV - RESUME CLASS FILE
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% This class file defines the structure and design of the template. 
+%
+% Original header:
+% Copyright (C) 2010 by Trey Hunner
+%
+% Copying and distribution of this file, with or without modification,
+% are permitted in any medium without royalty provided the copyright
+% notice and this notice are preserved. This file is offered as-is,
+% without any warranty.
+%
+% Created by Trey Hunner and modified by www.LaTeXTemplates.com
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ProvidesClass{resume}[2023/04/20 CV class]
-\NeedsTeXFormat{LaTeX2e}
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
-\ProcessOptions\relax
-\LoadClass{article}
+\ProvidesClass{resume}[2010/07/10 v0.9 Resume class]
 
-\usepackage[hmargin=1.25cm, vmargin=0.75cm]{geometry}
+\LoadClass[11pt,letterpaper]{article} % Font size and paper type
+
+\usepackage[parfill]{parskip} % Remove paragraph indentation
+\usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
+\usepackage{ifthen} % Required for ifthenelse statements
+
 \usepackage{hyperref}
-\usepackage{fontawesome}
-\usepackage{xcolor}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
 
-% Define custom colors
-\definecolor{primary}{RGB}{0, 0, 112} % Dark blue
-\definecolor{darkgray}{RGB}{70, 70, 70}
-\definecolor{lightgray}{RGB}{230, 230, 230}
+\pagestyle{empty} % Suppress page numbers
 
 %----------------------------------------------------------------------------------------
-%	FONTS
-%----------------------------------------------------------------------------------------
-\usepackage{fontspec}
-\setmainfont[
-  Path=fonts/,
-  BoldFont=Montserrat-Bold,
-  ItalicFont=Montserrat-Italic,
-  BoldItalicFont=Montserrat-BoldItalic
-]{Montserrat-Regular}
-
-\newfontfamily\headingfont[
-  Path=fonts/,
-  BoldFont=Montserrat-ExtraBold,
-  ItalicFont=Montserrat-ExtraBoldItalic
-]{Montserrat-Bold}
-
-%----------------------------------------------------------------------------------------
-%	CUSTOM COMMANDS
+%	HEADINGS COMMANDS: Commands for printing name and address
 %----------------------------------------------------------------------------------------
 
-% Command for printing the name at the top of the document
-\newcommand{\name}[1]{
-  \centerline{\Huge\headingfont\textcolor{primary}{#1}}
-  \vspace{0.25cm}
+\def \name#1{\def\@name{#1}} % Defines the \name command to set name
+\def \@name {} % Sets \@name to empty by default
+
+\def \addressSep {$\diamond$} % Set default address separator to a diamond
+
+% One, two or three address lines can be specified 
+\let \@addressone \relax
+\let \@addresstwo \relax
+\let \@addressthree \relax
+
+% \address command can be used to set the first, second, and third address (last 2 optional)
+\def \address #1{
+  \@ifundefined{@addresstwo}{
+    \def \@addresstwo {#1}
+  }{
+  \@ifundefined{@addressthree}{
+  \def \@addressthree {#1}
+  }{
+     \def \@addressone {#1}
+  }}
 }
 
-% Command for printing the contact information
-\newcommand{\address}[1]{
-  \centerline{\large\textcolor{darkgray}{#1}}
+% \printaddress is used to style an address line (given as input)
+\def \printaddress #1{
+  \begingroup
+    \def \\ {\addressSep\ }
+    \centerline{#1}
+  \endgroup
+  \par
+  \addressskip
 }
 
-% One thing per line
-\newcommand{\datedsubsection}[2]{
-  \item \textbf{#1} \hfill #2 \\
+% \printname is used to print the name as a page header
+\def \printname {
+  \begingroup
+    \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
+    \nameskip\break
+  \endgroup
 }
 
-\newcommand{\dateditem}[2]{
-  \item \textbf{#1} \hfill #2
+%----------------------------------------------------------------------------------------
+%	PRINT THE HEADING LINES
+%----------------------------------------------------------------------------------------
+
+\let\ori@document=\document
+\renewcommand{\document}{
+  \ori@document  % Begin document
+  \printname % Print the name specified with \name
+  \@ifundefined{@addressone}{}{ % Print the first address if specified
+    \printaddress{\@addressone}}
+  \@ifundefined{@addresstwo}{}{ % Print the second address if specified
+    \printaddress{\@addresstwo}}
+     \@ifundefined{@addressthree}{}{ % Print the third address if specified
+    \printaddress{\@addressthree}}
 }
 
-% Creates a section with a horizontal line between it and the above content
-\newcommand{\rSection}[1]{
-  \vspace{0.3cm}
-  {\large\headingfont\textcolor{primary}{\uppercase{#1}}}
-  \vspace{-0.3cm}
-  \hrule height 1pt
-  \vspace{0.3cm}
+%----------------------------------------------------------------------------------------
+%	SECTION FORMATTING
+%----------------------------------------------------------------------------------------
+
+% Defines the rSection environment for the large sections within the CV
+\newenvironment{rSection}[1]{ % 1 input argument - section name
+  \sectionskip
+  \MakeUppercase{{\bf #1}} % Section title
+  \sectionlineskip
+  \hrule % Horizontal line
+  \begin{list}{}{ % List for each individual item in the section
+    \setlength{\leftmargin}{0em} % Margin within the section
+  }
+  \item[]
+}{
+  \end{list}
 }
 
-% Creates a subsection
-\newcommand{\rSubsection}[4]{
-  \vspace{0.1cm}
-  {\large\textbf{#1}} \hfill {\textit{#2}}\\
-  {#3} \hfill {\textit{#4}}\\
-  \vspace{0.1cm}
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE FORMATTING
+%----------------------------------------------------------------------------------------
+
+\newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
+ {\bf #1} \hfill {#2} % Bold company name and date on the right
+ \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+  \\
+  {\em #3} \hfill {\em #4} % Italic job title and location
+  }\smallskip
+  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+  }{
+  \end{list}
+  \vspace{0.5em} % Some space after the list of bullet points
 }
+
+% The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
+\def\namesize{\LARGE} % Size of the name at the top of the document
+\def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
+\def\sectionlineskip{\medskip} % The space above the horizontal line for each section 
+\def\nameskip{\medskip} % The space after your name at the top
+\def\sectionskip{\medskip} % The space after the heading section
