@@ -2,311 +2,282 @@
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Mohammad Heydari - Python Developer & Data Engineer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mohammad Heydari · Senior Developer, Applied NLP &amp; LLMs</title>
+  <meta name="description" content="Mohammad Heydari — senior developer in Ottawa working on backend systems, data pipelines and applied NLP / language models.">
   <meta name="author" content="Mohammad Heydari">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://mmheydari97.github.io/">
+  <link rel="icon" type="image/svg+xml" href="img/laptop-code-solid.svg">
 
-  <title>Mohammad Heydari | Python Developer & AI Engineer</title>
-  <link rel="shortcut icon" type="image/x-icon" href="img/laptop-code-solid.svg" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Mohammad Heydari · Senior Developer, Applied NLP &amp; LLMs">
+  <meta property="og:description" content="Senior developer in Ottawa working on backend systems, data pipelines and applied NLP / language models.">
+  <meta property="og:url" content="https://mmheydari97.github.io/">
+  <meta property="og:image" content="https://mmheydari97.github.io/img/profile.jpg">
+  <meta name="twitter:card" content="summary">
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Theme: set before first paint (saved choice, else OS setting) -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') {
+        t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-bs-theme', t);
+    })();
+  </script>
 
-  <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="css/resume.min.css" rel="stylesheet">
-  <!-- Responsive fixes -->
-  <link href="css/responsive-fix.css" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body id="page-top">
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#sideNav" data-bs-root-margin="0px 0px -55%">
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-      <span class="d-block d-lg-none">Mohammad Heydari</span>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="navbar navbar-expand-lg fixed-top" id="sideNav" aria-label="Sections">
+    <a class="navbar-brand" href="#page-top">
+      <span class="d-lg-none">Mohammad Heydari</span>
       <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+        <img class="img-profile" src="img/profile.jpg" alt="Portrait of Mohammad Heydari" width="128" height="128">
+        <span class="d-block side-name">Mohammad Heydari</span>
+        <span class="d-block side-role">Senior Developer · Applied NLP</span>
       </span>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="d-flex align-items-center gap-2 d-lg-none">
+      <button type="button" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <i class="fas fa-moon" aria-hidden="true"></i><i class="fas fa-sun" aria-hidden="true"></i>
+      </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#certifications">Certifications</a>
-        </li>
+      <ul class="navbar-nav pt-2 pt-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://mmheydari97.pythonanywhere.com/">Blog <i class="fas fa-arrow-up-right-from-square small" aria-hidden="true"></i></a></li>
       </ul>
+      <div class="side-foot d-none d-lg-flex">
+        <button type="button" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <i class="fas fa-moon" aria-hidden="true"></i><i class="fas fa-sun" aria-hidden="true"></i>
+        </button>
+      </div>
     </div>
   </nav>
 
-  <div class="container-fluid p-0">
+  <main class="main" id="main">
 
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
-      <div class="w-100">
-        <h1 class="mb-0">Mohammad
-          <span class="text-primary">Heydari</span>
-        </h1>
-        <div class="subheading mb-5">OTTAWA, ON, CANADA ·
-          <a href="mailto:moheydari1997@gmail.com">moheydari1997@gmail.com</a>
-        </div>
-        <p class="lead mb-5">
-          Python Developer with expertise in data engineering and ETL processes. Strong background in Python development using pandas and NumPy for data transformation. Experienced in API development with FastAPI and database management with SQL/NoSQL. Proven track record of successfully migrating legacy systems to efficient Python-based implementations with improved performance.
-          You can find my curriculum vitae <a href="cv/updated/modern-cv.html" target="_blank">here</a> or download the PDF version <a href="cv/updated/CV.pdf" target="_blank">here</a>.
-        </p>
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/mmheydari97">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://github.com/mmheydari97">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://mmheydari97.pythonanywhere.com">
-            <i class="fas fa-globe"></i>
-          </a>                  
-        </div>
+    <section class="resume-section" id="about">
+      <h1 class="hero-name">Mohammad Heydari</h1>
+      <p class="hero-headline">Senior Developer · Backend, Data &amp; Applied NLP / LLMs</p>
+      <div class="hero-meta">
+        <span><i class="fas fa-location-dot" aria-hidden="true"></i>Ottawa, ON, Canada</span>
+        <a href="mailto:moheydari1997@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i>moheydari1997@gmail.com</a>
+      </div>
+      <p class="lead-text">
+        Python Developer with expertise in data engineering and ETL processes. Strong background in Python development using pandas and NumPy for data transformation. Experienced in API development with FastAPI and database management with SQL/NoSQL. Proven track record of successfully migrating legacy systems to efficient Python-based implementations with improved performance.
+        <span class="todo">[TODO: new 2–3 sentence summary]</span>
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="cv/updated/CV.pdf" target="_blank" rel="noopener"><i class="fas fa-file-arrow-down" aria-hidden="true"></i> Download CV</a>
+        <a class="btn btn-outline-secondary" href="cv/updated/modern-cv.html"><i class="fas fa-file-lines" aria-hidden="true"></i> Web CV</a>
+        <a class="btn btn-outline-secondary" href="https://mmheydari97.pythonanywhere.com/"><i class="fas fa-pen-nib" aria-hidden="true"></i> Blog</a>
+        <a class="btn btn-outline-secondary" href="https://www.linkedin.com/in/mmheydari97" target="_blank" rel="noopener" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a>
+        <a class="btn btn-outline-secondary" href="https://github.com/mmheydari97" target="_blank" rel="noopener" aria-label="GitHub profile"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
       </div>
     </section>
-    <hr class="m-0">
 
-    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
-      <div class="w-100">
-        <h2 class="mb-5">Experience</h2>
+    <section class="resume-section" id="experience">
+      <h2>Experience</h2>
 
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Analytics Engineer</h3>
-            <div class="subheading mb-3">Revolution Data Platforms</div>
-            <p>
-                Developed a real-time customer service call management system using Python, FastAPI, and WebSockets, building end-to-end data processing pipelines for voice communication. Implemented a prototype application for voice memo transcription with structured data extraction and automated task management based on content severity. Optimized multi-class text classification through prompt engineering and k-fold validation, significantly improving model performance.
-            </p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">February 2025 - Present</span>
-          </div>
+      <article class="resume-item">
+        <div class="item-head">
+          <h3>Senior IT Developer</h3>
+          <span class="item-date"><span class="todo">[TODO: dates]</span></span>
         </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Software Engineer</h3>
-            <div class="subheading mb-3">Paphus Solutions</div>
-            <p>
-              Successfully migrated a Unity-based Android application to WebGL, implementing asynchronous connection management and data handling, demonstrating strong system migration capabilities. Integrated Python-based analytics pipelines with cloud services, enhancing real-time data processing through optimized ETL workflows. Developed chatbot APIs across multiple platforms using Python and RESTful services, improving user engagement through data-driven insights.
-            </p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">January 2023 - August 2024</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Course Instructor</h3>
-            <div class="subheading mb-3">Carleton University</div>
-            <p>
-              Delivered comprehensive Python programming workshops focusing on data manipulation, pandas, and ETL concepts for real-world applications. Guided students in implementing ER diagrams and SQL for practical database solutions, emphasizing data integrity and efficient query optimization.
-            </p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">September 2022 - December 2022</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-          <div class="resume-content">
-            <h3 class="mb-0">Graduate Research Assistant</h3>
-            <div class="subheading mb-3">Carleton University</div>
-            <p>
-              Developed a Python-based data generation and transformation pipeline, optimizing ETL processes for deep learning models in research applications. Designed custom data preprocessing workflows and performance metrics for efficient data analysis and model evaluation.
-            </p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">January 2021 - November 2022</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
-      <div class="w-100">
-        <h2 class="mb-5">Education</h2>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Carleton University</h3>
-            <div class="subheading mb-3">Master of Science</div>
-            <div>Computer Science - Specialization in Data Science</div>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">January 2021 - November 2022</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-          <div class="resume-content">
-            <h3 class="mb-0">Amirkabir University of Technology</h3>
-            <div class="subheading mb-3">Bachelor of Science</div>
-            <div>Computer Engineering</div>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">September 2015 - December 2020</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="projects">
-      <div class="w-100">
-        <h2 class="mb-5">Projects</h2>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Fine-Tuning and Local RAG for LLMs</h3>
-            <p>
-              Developed a lightweight data processing pipeline for Retrieval-Augmented Generation (RAG) using Python, enhancing information retrieval from domain-specific datasets. Implemented efficient data extraction and transformation techniques to optimize contextual search, demonstrating expertise in ETL processes for NLP applications.
-            </p>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Custom Information Retrieval System</h3>
-            <p>
-              Built a search engine from scratch in Python, implementing data extraction, cleaning, and transformation pipelines for efficient text processing. Utilized pandas for data manipulation and designed an indexing system to improve search accuracy for large document collections.
-            </p>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-          <div class="resume-content">
-            <h3 class="mb-0">NLP-Driven Sentiment Analysis</h3>
-            <p>
-              Developed a Python-based ETL pipeline for processing textual data using pandas and NumPy. Created vectorized operations for efficient text feature extraction, achieving 93.61% accuracy in sentiment classification through optimized data transformation.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
-      <div class="w-100">
-        <h2 class="mb-5">Skills</h2>
-
-        <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-        <ul class="list-inline dev-icons">
-          <li class="list-inline-item">
-            <i class="fab fa-python"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-java"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-html5"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-css3-alt"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-js-square"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-aws"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-docker"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-git-alt"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-linux"></i>
-          </li>
+        <p class="item-org">TD Securities · <span class="todo">[TODO: team / area]</span></p>
+        <ul>
+          <li><span class="todo">[TODO: impact bullet with a metric]</span></li>
+          <li><span class="todo">[TODO: impact bullet with a metric]</span></li>
+          <li><span class="todo">[TODO: impact bullet with a metric]</span></li>
         </ul>
+        <ul class="chips" aria-label="Technologies"><li><span class="todo">[TODO: stack]</span></li></ul>
+      </article>
 
-        <ul class="fa-ul mb-0 mt-4">
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            <strong>Python Development</strong> - pandas, NumPy, scikit-learn for ETL pipelines and data transformation workflows
-          </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            <strong>Data Engineering</strong> - SQL (PostgreSQL, MySQL) and NoSQL databases for optimized data storage and retrieval
-          </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            <strong>API Development</strong> - FastAPI, Flask, and Django for robust back-end systems
-          </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            <strong>System Migration</strong> - Transitioning legacy codebases to modern Python implementations
-          </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            <strong>Cloud Technologies</strong> - AWS and Azure for optimizing data processing pipelines in distributed environments
-          </li>
+      <article class="resume-item">
+        <div class="item-head">
+          <h3>Research Assistant (Part-time)</h3>
+          <span class="item-date"><span class="todo">[TODO: dates]</span></span>
+        </div>
+        <p class="item-org"><span class="todo">[TODO: institution · lab / supervisor]</span></p>
+        <ul>
+          <li>Working on language models for understanding and preserving under-represented languages. <span class="todo">[TODO: data, models, languages]</span></li>
+          <li><span class="todo">[TODO: results bullet]</span></li>
         </ul>
+        <ul class="chips" aria-label="Technologies"><li>Language models</li><li>NLP</li><li>Low-resource languages</li></ul>
+      </article>
+
+      <article class="resume-item">
+        <div class="item-head">
+          <h3>Analytics Engineer</h3>
+          <span class="item-date">Feb 2025 – <span class="todo">[TODO: end]</span></span>
+        </div>
+        <p class="item-org">Revolution Data Platforms</p>
+        <ul>
+          <li>Developed a real-time customer service call management system using Python, FastAPI, and WebSockets, building end-to-end data processing pipelines for voice communication.</li>
+          <li>Implemented a prototype application for voice memo transcription with structured data extraction and automated task management based on content severity.</li>
+          <li>Optimized multi-class text classification through prompt engineering and k-fold validation, significantly improving model performance.</li>
+        </ul>
+        <ul class="chips" aria-label="Technologies"><li>Python</li><li>FastAPI</li><li>WebSockets</li><li>Speech-to-text</li><li>Prompt engineering</li></ul>
+      </article>
+
+      <article class="resume-item">
+        <div class="item-head">
+          <h3>Software Engineer</h3>
+          <span class="item-date">Jan 2023 – Aug 2024</span>
+        </div>
+        <p class="item-org">Paphus Solutions</p>
+        <ul>
+          <li>Successfully migrated a Unity-based Android application to WebGL, implementing asynchronous connection management and data handling, demonstrating strong system migration capabilities.</li>
+          <li>Integrated Python-based analytics pipelines with cloud services, enhancing real-time data processing through optimized ETL workflows.</li>
+          <li>Developed chatbot APIs across multiple platforms using Python and RESTful services, improving user engagement through data-driven insights.</li>
+        </ul>
+        <ul class="chips" aria-label="Technologies"><li>Python</li><li>REST APIs</li><li>Unity / WebGL</li><li>ETL</li><li>Cloud</li></ul>
+      </article>
+
+      <article class="resume-item">
+        <div class="item-head">
+          <h3>Course Instructor</h3>
+          <span class="item-date">Sep 2022 – Dec 2022</span>
+        </div>
+        <p class="item-org">Carleton University</p>
+        <ul>
+          <li>Delivered comprehensive Python programming workshops focusing on data manipulation, pandas, and ETL concepts for real-world applications.</li>
+          <li>Guided students in implementing ER diagrams and SQL for practical database solutions, emphasizing data integrity and efficient query optimization.</li>
+        </ul>
+      </article>
+
+      <article class="resume-item">
+        <div class="item-head">
+          <h3>Graduate Research Assistant</h3>
+          <span class="item-date">Jan 2021 – Nov 2022</span>
+        </div>
+        <p class="item-org">Carleton University</p>
+        <ul>
+          <li>Developed a Python-based data generation and transformation pipeline, optimizing ETL processes for deep learning models in research applications.</li>
+          <li>Designed custom data preprocessing workflows and performance metrics for efficient data analysis and model evaluation.</li>
+        </ul>
+        <ul class="chips" aria-label="Technologies"><li>Python</li><li>Deep learning</li><li>Data pipelines</li></ul>
+      </article>
+    </section>
+
+    <section class="resume-section" id="education">
+      <h2>Education</h2>
+
+      <article class="resume-item">
+        <div class="item-head">
+          <h3>Master of Science, Computer Science</h3>
+          <span class="item-date">Jan 2021 – Nov 2022</span>
+        </div>
+        <p class="item-org">Carleton University · Specialization in Data Science</p>
+      </article>
+
+      <article class="resume-item">
+        <div class="item-head">
+          <h3>Bachelor of Science, Computer Engineering</h3>
+          <span class="item-date">Sep 2015 – Dec 2020</span>
+        </div>
+        <p class="item-org">Amirkabir University of Technology</p>
+      </article>
+    </section>
+
+    <section class="resume-section" id="projects">
+      <h2>Projects</h2>
+
+      <article class="resume-item">
+        <div class="item-head"><h3>Fine-Tuning and Local RAG for LLMs</h3></div>
+        <p>Developed a lightweight data processing pipeline for Retrieval-Augmented Generation (RAG) using Python, enhancing information retrieval from domain-specific datasets. Implemented efficient data extraction and transformation techniques to optimize contextual search, demonstrating expertise in ETL processes for NLP applications.</p>
+        <ul class="chips" aria-label="Technologies"><li>Python</li><li>RAG</li><li>LLMs</li></ul>
+      </article>
+
+      <article class="resume-item">
+        <div class="item-head"><h3>Custom Information Retrieval System</h3></div>
+        <p>Built a search engine from scratch in Python, implementing data extraction, cleaning, and transformation pipelines for efficient text processing. Utilized pandas for data manipulation and designed an indexing system to improve search accuracy for large document collections.</p>
+        <ul class="chips" aria-label="Technologies"><li>Python</li><li>pandas</li><li>Information retrieval</li></ul>
+      </article>
+
+      <article class="resume-item">
+        <div class="item-head"><h3>NLP-Driven Sentiment Analysis</h3></div>
+        <p>Developed a Python-based ETL pipeline for processing textual data using pandas and NumPy. Created vectorized operations for efficient text feature extraction, achieving 93.61% accuracy in sentiment classification through optimized data transformation.</p>
+        <ul class="chips" aria-label="Technologies"><li>Python</li><li>NumPy</li><li>NLP</li></ul>
+      </article>
+    </section>
+
+    <section class="resume-section" id="skills">
+      <h2>Skills</h2>
+      <div class="skill-groups">
+        <div>
+          <h3>Languages</h3>
+          <ul class="chips"><li>Python</li><li>SQL</li><li>Java</li><li>JavaScript</li></ul>
+        </div>
+        <div>
+          <h3>Backend / APIs</h3>
+          <ul class="chips"><li>FastAPI</li><li>Flask</li><li>Django</li><li>REST</li><li>WebSockets</li></ul>
+        </div>
+        <div>
+          <h3>Data &amp; ML</h3>
+          <ul class="chips"><li>pandas</li><li>NumPy</li><li>scikit-learn</li><li>ETL pipelines</li></ul>
+        </div>
+        <div>
+          <h3>LLM / NLP</h3>
+          <ul class="chips"><li>RAG</li><li>Prompt engineering</li><li>Text classification</li><li>Information retrieval</li></ul>
+        </div>
+        <div>
+          <h3>Cloud / DevOps</h3>
+          <ul class="chips"><li>AWS</li><li>Azure</li><li>Docker</li><li>Git</li><li>Linux</li></ul>
+        </div>
+        <div>
+          <h3>Databases</h3>
+          <ul class="chips"><li>PostgreSQL</li><li>MySQL</li><li>NoSQL</li></ul>
+        </div>
       </div>
     </section>
-    <hr class="m-0">
 
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="certifications">
-      <div class="w-100">
-        <h2 class="mb-5">Certifications &amp; Languages</h2>
-        <ul class="fa-ul mb-0">
-          <li>
-            <i class="fa-li fa fa-certificate text-warning"></i>
-            DataCamp Data Scientist with Python
-          </li>
-          <li>
-            <i class="fa-li fa fa-certificate text-warning"></i>
-            Coursera GANs Specialization
-          </li>
-          <li>
-            <i class="fa-li fa fa-language text-warning"></i>
-            <strong>Languages:</strong> English (Fluent), French (Intermediate), Persian (Native)
-          </li>
-        </ul>
-      </div>
+    <section class="resume-section" id="certifications">
+      <h2>Certifications &amp; Languages</h2>
+      <ul class="plain-list">
+        <li><i class="fas fa-certificate" aria-hidden="true"></i>DataCamp Data Scientist with Python</li>
+        <li><i class="fas fa-certificate" aria-hidden="true"></i>Coursera GANs Specialization</li>
+        <li><i class="fas fa-language" aria-hidden="true"></i><strong>Languages:</strong> English (Fluent), French (Intermediate), Persian (Native)</li>
+      </ul>
     </section>
 
-  </div>
+    <footer class="site-footer">
+      <span>&copy; <span id="year">2026</span> Mohammad Heydari · Last updated September 2026</span>
+      <nav aria-label="Footer">
+        <a href="https://github.com/mmheydari97" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/mmheydari97" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://mmheydari97.pythonanywhere.com/">Blog</a>
+      </nav>
+    </footer>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </main>
 
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="js/resume.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 

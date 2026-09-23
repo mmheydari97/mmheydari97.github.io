@@ -1,25 +1,31 @@
-# My CV Website
+# mmheydari97.github.io
 
-## Preview
+Personal résumé site for Mohammad Heydari, served by GitHub Pages at <https://mmheydari97.github.io>.
 
+## Structure
 
-**[View Live Preview](https://mmheydari97.github.io/cv)**
+| Path | What it is |
+| --- | --- |
+| `index.html` | The résumé site (fixed sidebar on desktop, top bar on mobile) |
+| `css/style.css` | All site styles; the design-token block at the top is shared with the blog |
+| `js/main.js` | Mobile menu collapse, light/dark toggle, footer year |
+| `cv/updated/modern-cv.html` | Single-page printable CV |
+| `cv/updated/CV.tex`, `CV.pdf` | LaTeX CV and its PDF |
+| `img/` | Profile photo and favicon |
 
-## Status
+Bootstrap 5.3, Font Awesome 6 and Inter load from CDNs. There is no build step: edit the files and push.
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-resume/master/LICENSE)
-[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-resume.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-resume)
+## Local preview
 
-## Download and Installation
+```sh
+python3 -m http.server 8000
+# open http://localhost:8000
+```
 
-I have used a template for my cv website.
-If You want to develop your own, choose one of the following options to get started
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/resume/)
-* Install via npm: `npm i startbootstrap-resume`
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-resume.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-resume)
+## Theme
 
+The page follows the OS light/dark setting. The sun/moon button overrides it and the choice is saved in `localStorage` (key `theme`, shared with the web CV).
 
-## Copyright and License
+## License
 
-Copyright 2013-2019 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-resume/blob/gh-pages/LICENSE) license.
+Originally based on Start Bootstrap's Resume template (MIT). See `LICENSE`.
